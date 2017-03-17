@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="content_script.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            color:black;
+        }
+        left {
+          float: left;
+          width: 85px;
+          font-size: 14px;
+          padding-top:8px;
+          padding-bottom:8px;
+        }
+        right {
+          float: right;
+          width: 90px;
+        }
+        center {
+          display: inline-block;
+          padding-top: 8px;
+          paddingbottom: 8px
+          width: 150px;
+        }
+
+        .onoffswitch {
+            position: relative; width: 90px;
+            -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+        }
+        .onoffswitch-checkbox {
+            display: none;
+        }
+        .onoffswitch-label {
+            display: block; overflow: hidden; cursor: pointer;
+            border: 2px solid #999999; border-radius: 20px;
+        }
+        .onoffswitch-inner {
+            display: block; width: 200%; margin-left: -100%;
+            transition: margin 0.3s ease-in 0s;
+        }
+        .onoffswitch-inner:before, .onoffswitch-inner:after {
+            display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+            font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+            box-sizing: border-box;
+        }
+        .onoffswitch-inner:before {
+            content: "ON";
+            padding-left: 10px;
+            background-color: #34A7C1; color: #FFFFFF;
+        }
+        .onoffswitch-inner:after {
+            content: "OFF";
+            padding-right: 10px;
+            background-color: #EEEEEE; color: #999999;
+            text-align: right;
+        }
+        .onoffswitch-switch {
+            display: block; width: 18px; margin: 6px;
+            background: #FFFFFF;
+            position: absolute; top: 0; bottom: 0;
+            right: 56px;
+            border: 2px solid #999999; border-radius: 20px;
+            transition: all 0.3s ease-in 0s;
+        }
+        .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+            margin-left: 0;
+        }
+        .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+            right: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+      <div style='text-align:center;'>
+      	<select id="countryID" name ="countryID"></select>
+        <script type = "text/javascript" src="countries.js"></script>
+      </div>
+
+    </center>
+
+    <left>
+          Censor Ninja
+    </left>
+
+    <right>
+      <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" unchecked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+        </label>
+      </div>
+    </right>
+</body>
+</html>

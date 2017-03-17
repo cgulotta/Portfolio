@@ -1,0 +1,12 @@
+﻿#myOwnCustomFirstToolbar12345{
+	position: fixed;
+	z-index: 1000;
+	top: 0%;
+	left: 33%;
+	width: 33%;
+	background: rgba(255, 255, 255, 0.7);
+	border: 2;
+	border_style: solid;
+	border-width: 5px;
+	border-color: black;
+}
