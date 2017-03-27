@@ -1,0 +1,186 @@
+<!-- howdy/templates/landing.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'main_theme.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'slideshow.css' %}" />
+        <script src="{% static 'pagescripts.js' %}"></script>
+        <meta charset="utf-8">
+        <title>Personal Site - Charles Gulotta</title>
+    </head>
+    <body id="main_body">
+
+        <!-- SPLASH AREA -->
+        <div id="quote">{{ quote.text }}<br>{{ quote.name }}</div>
+        <div id="splash" class="blur">
+          <div id="ISS_VID"></div>
+        </div>
+        <br>
+        <!-- BIO AREA -->
+        <div id="professional">
+          <!-- EXEC SUMMARY -->
+          <div id="executive_summary" class="round">
+            <p class=headline>Executive Summary</p>
+            <ul>
+              <li class="image">
+                <img src={% static "images/PRO_profile_pic.jpg" %} style="width:10vw; height:auto; border-radius:5vw;"></img>
+              </li>
+              <li class="text1">
+                <p class=bulk_text>{{ executive_summary }}</p>
+              </li>
+            </ul>
+          </div>
+
+          <br>
+
+          <!-- PROJECTS -->
+          <div id="projects" class="blur">
+            <p class=headline>Projects</p>
+            <!-- BLUE VIEW -->
+            <ul>
+              <li class="text2">
+                <p class=bulk_text>{{ projects.BlueView }}</p>
+              </li>
+              <li class="image">
+                <img src={% static "images/RB_ICON.png" %} style="width:16vw; height:auto; border-radius:8vw;"></img>
+              </li>
+            </ul>
+            <!-- ASTR RESEARCH  -->
+            <ul>
+              <li class="image">
+                <img src={% static "images/saturn.jpg" %} style="width:auto; height:16vw;border-radius:8vw;"></img>
+              </li>
+              <li class="text2">
+                <p class=bulk_text>{{ projects.Saturnian_Satellites }}</p>
+              </li>
+            </ul>
+            <!-- SNAILIENS -->
+            <ul>
+              <li class="text2">
+                <p class=bulk_text>{{ projects.Snailiens }}</p>
+              </li>
+              <li class="image">
+                <img src={% static "images/snailiens.jpg" %} style="width:auto; height:16vw;border-radius:8vw;"></img>
+              </li>
+            </ul>
+            <!-- UMD CS  -->
+            <ul>
+              <li class="image">
+                <img src={% static "images/UMD_CS.png" %} style="width:auto; height:16vw;border-radius:8vw;"></img>
+              </li>
+              <li class="text2">
+                <p class=bulk_text>{{ projects.UMD_CS }}</p>
+              </li>
+            </ul>
+          </div>
+
+          <br>
+          <!--SKILLS-->
+          <div id="skills" class="blur">
+            <p class=headline style="color:black">Skills</p>
+            <ul style="width:87vw;">
+              <li class="text2" style="margin:auto;text-align:center;">
+                <p class=bulk_text>
+                  {% for skill in skills.software %}
+                  {{ skill }}<br>
+                  {% endfor %}
+                </p>
+              </li>
+              <li class="text2" style="margin:auto;text-align:center;">
+                <p class=bulk_text>
+                  {% for skill in skills.languages %}
+                  {{ skill }}<br>
+                  {% endfor %}
+                </p>
+              </li>
+            </ul>
+        </div>
+      </div>
+
+      <div id="personal" class="bio">
+        <p class=headline>About Me</p>
+        <br>
+        <div class="slideshow-container" style="text-align:center;">
+          {% for pic in slideshow %}
+          <div class="mySlides fade">
+            <img src="static/images/slideshow/{{ pic }}" style="height:50vh;max-width:50vw">
+          </div>
+          {% endfor %}
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a id="next_button" class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+        <script src="{% static 'slideshow.js' %}"></script>
+        <div style="margin:0 auto;text-align:center;width:76vw;">
+          <p class=bulk_text>{{ about_me.0 }}</p>
+          <p class=bulk_text>{{ about_me.1 }}</p>
+          <ul style="text-align:justify;margin:0 auto;width:50vw;">
+            {% for place in about_me.2 %}
+            <li class=bulk_text>{{ place }}</li>
+            {% endfor %}
+          </ul>
+          <p class=bulk_text>{{ about_me.3 }}</p>
+        </div>
+
+        <p id="interests" class=headline>Interests</p>
+        <table style="margin:0 auto;">
+          <tbody>
+            <tr>
+              {% for k in interests %}
+              <td><a href="{{ k.2 }}"><img src="static/images/interests/{{ k.1 }}" style="width:16vw;"></img></a></td>
+              {% endfor %}
+            </tr>
+            <tr>
+              {% for k in interests %}
+              <td>{{ k.0 }}</td>
+              {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="navigation" style="position:fixed;top:0vh;left:13.5vw;">
+        <style>
+        #navigation td{
+          background-color: rgba(255,255,255,0.8);
+          box-shadow: 0 0 9pt 10pt rgba(255,255,255,0.8);
+          font-size: 14pt;
+          color:black;
+          margin:2em;
+          text-align: center;
+          width:5em;
+          transition: 0.25s ease;
+        }
+        #navigation td:hover{
+          background-color: rgba(0,0,0,0.8);
+          box-shadow: 0 0 9pt 10pt rgba(0,0,0,0.8);
+          font-size: 14pt;
+          color:white;
+          margin:2em;
+          text-align: center;
+          width:5em;
+          transition: 0.25s ease;
+        }
+        </style>
+        <script src="{% static 'navigation.js' %}"></script>
+        <table style="border-spacing:18pt;">
+            <tr>
+              <td onclick="to_ISS()">ISS</td>
+              <td onclick="to_Summary()">Summary</td>
+              <td onclick="to_Projects()">Projects</td>
+              <td onclick="to_Skills()">Skills</td>
+              <td onclick="to_AboutMe()">About Me</td>
+              <td onclick="to_Interests()">Interests</td>
+            </tr>
+        </table>
+
+      </div>
+    </body>
+</html>

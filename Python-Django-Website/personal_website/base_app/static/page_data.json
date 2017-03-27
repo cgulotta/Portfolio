@@ -1,0 +1,40 @@
+{
+  "quote": {
+    "text": "\"Equipped with his five senses, man explores the universe around him and calls the adventure Science.\"",
+    "name": "-Edwin Hubble"
+    },
+  "executive_summary": "Recent University of Maryland Computer Science graduate, seeking challenging Software Development opportunities in Aerospace, Artificial Intelligence, User Experience Design, and Entertainment.",
+  "projects": {
+    "BlueView": "Designed and tested a web-based, full-workflow UI for RadiantBlue's flagship simulator: BlueSim. Deployed a full-stack web application to a secure environment as part of a software development team. Increased intel analyst workflow efficiency via centralized versioning, object-oriented design, and UX / UI testing. Integrated a handler API to interface between a Postgres database and a Django web framework. Documented user guides, developer notes, software diagrams, and project requirements using Confluence",
+    "Saturnian_Satellites": "Utilized a High Performance Computing Cluster (HPCC) to model light scattering behavior of 3D meshes. Automated parsing of Multi-Sphere T-Matrix (MSTM) data into readable format and graphics using Ruby. Cross-examined Cassini spectroscopy data to determine surface material properties on Saturnian satellites. Tracked asteroid (16813) 1997 UT6 via a New Mexico based, internet-controlled telescope. Published lightcurve spectroscopy analysis results in The Minor Planet Bulletin (vol. 42, num. 4)",
+    "Snailiens": "Supported the Steam early-access launch of the VR game, Snailiens, through concept, design, testing, and deployment. Accelerated development workflow by configuring distributed ray processing (swarm light building) . Manage content version control through Perforce server and Steampipe administration. Research and integrate new technologies to improve development infrastructure or gameplay experience. Ideate and critique game concepts, assets, mechanics, and storyboards",
+    "UMD_CS": "Created a Hierarchical Task Network (HTN) planner for a Baxter robot using Python and Robot OS. Prototyped direct, proportional, and potential-field control schemes for a ROS TurtleBot. Constructed and penetration tested secure Bank-ATM networks for the Build-It-Break-It competition. Simulated a Stellar Nova event using Runge-Kutta and Leapfrog estimators in C"
+  },
+  "skills": {
+    "software": ["Unreal Engine 4","Autodesk 3DS Max","Eclipse, Atom, VS '15","Linux, Windows, OSX","Django","Android Dev. Kit (ADK)","GitHub, Perforce","Atlassian Suite","MPO Canopus","Microsoft Office Suite","Robot OS (ROS)"],
+    "languages": ["Python","Java","Javascript, Jquery, Ajax","HTML, CSS","C, C++","Bash","PostgresQL","Ruby","Assembly, MIPS"]
+  },
+  "about_me":
+  [
+    "Welcome! I built this site as an exercise in web interface design and python/django development.",
+    "A bit about me, I like making things. Things like webpages, supernova simulations, VR games, news aggregating and summarizing applications, and all the 'wimpy' coffee I can stomach. I also like going places. Here are some places I've been, or would like to go:",
+    [
+      "In front of a marching band",
+      "Akihabara, Japan",
+      "12,000ft above Rehoboth Beach",
+      "The Cherry Blossom Festival at The Tidal Basin",
+      "The top of Mammoth Mountain, with a broken collarbone",
+      "The top of Mt. Rainier, without a broken collarbone",
+      "47 hours into a project without any ideas or sleep"
+    ],
+      "Feel free to email me comments or suggestions at charliegulotta@gmail.com."
+    ],
+  "interests":
+  [
+    ["Gaming","gaming.png","http://store.steampowered.com/app/220200/"],
+    ["Music","music.jpeg","https://open.spotify.com/user/charlaycafe/playlist/1CCU45ywqcBljsWXpDux0B"],
+    ["Anime","anime.png","https://myanimelist.net/animelist/CharlayCafe"],
+    ["Spaceflight","spaceflight.png","https://www.reddit.com/r/spacex/"],
+    ["Exploration","exploration.jpg","https://www.nps.gov/yose/index.htm"]
+  ]
+}

@@ -1,0 +1,134 @@
+
+#main_body {
+  background-color: white;
+  color:black;
+  font-family: Segoe UI Light;
+}
+
+#quote {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 2vh 4vh rgba(255, 255, 255, 0.5);
+  z-index:1;
+  text-align: center;
+  width: 50%;
+  position:absolute;
+  top: 40vh;
+  left: 25vw;
+  font-size: 3vw;
+  color : black;
+  font-style: italic;
+}
+
+#ISS_VID{
+  position:relative;
+  height: 100%;
+  width: 100%;
+}
+
+#splash{
+  height: 100vh;
+  width: 97vw;
+  margin: 0 auto;
+}
+
+.headline{
+  font-size: 40pt;
+  text-align:center;
+  margin:inherit;
+}
+
+.bulk_text{
+  font-size: 14pt;
+}
+
+ul {
+  width:76vw;
+  display:table;
+  padding:2vh;
+}
+
+li.image {
+  padding:0 2vw 0 2vw;
+  display:table-cell;
+  vertical-align: middle;
+}
+
+li.text1 {
+  padding:0 2vw 0 2vw;
+  display:table-cell;
+  background-color:rgba(0,0,0,0.7);
+  border-radius: 5vw;
+  color:white;
+}
+
+li.text2 {
+  color:black;
+  padding:0 2vw 0 2vw;
+  display:table-cell;
+  vertical-align: middle;
+  background-color:rgba(255,255,255,0.8);
+  border-radius:5vw;
+  box-shadow: 0 0 5pt 10pt rgba(255,255,255,0.8);
+}
+
+
+.blur {
+    box-shadow: inset 0 0 8vh 10vh white;
+}
+
+.round{
+  border-radius:5vw;
+}
+
+#executive_summary{
+  background-image:url("images/network3.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position-y: 50%;
+  background-position-x: 50%;
+  padding:10vh;
+  color:white;
+}
+
+#projects{
+  background-image:url("images/tech_drawing.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position-x: 80%;
+  padding:10vh;
+}
+
+#skills{
+  background-image:url("images/project_animation.gif");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position-y: 50%;
+  background-position-x: 50%;
+  padding:10vh;
+}
+
+#personal{
+  text-align: center;
+}
+
+#navigation td{
+  background-color: rgba(255,255,255,0.8);
+  box-shadow: 0 0 9pt 10pt rgba(255,255,255,0.8);
+  font-size: 14pt;
+  color:black;
+  margin:2em;
+  text-align: center;
+  width:5em;
+  transition: 0.25s ease;
+}
+
+#navigation td:hover{
+  background-color: rgba(0,0,0,0.8);
+  box-shadow: 0 0 9pt 10pt rgba(0,0,0,0.8);
+  font-size: 14pt;
+  color:white;
+  margin:2em;
+  text-align: center;
+  width:5em;
+  transition: 0.25s ease;
+}
